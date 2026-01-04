@@ -82,6 +82,7 @@ function createBoard() {
         gridDisplay.appendChild(card);
     }
 }
+    resultDisplay.textContent = cardsWon.length;
 createBoard();
 
 function checkMatch() {
