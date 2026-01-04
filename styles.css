@@ -1,0 +1,42 @@
+#grid {
+    width: 450px;
+    height: 450px;
+    border-radius: 5px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: bold;
+    background: hsl(180, 19%, 57%);
+    padding: 10px;
+    border-radius: 15px;  
+    display: inline-block;   
+    margin-bottom: 0px;            
+}
+
+html{
+    background: hsl(180, 56%, 88%);
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    background: hsl(62, 46%, 90%);
+    border-radius: 4px;
+    padding: 5px;
+    margin: 3px;
+    
+}
+
+#container{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: hsl(160, 28%, 68%);
+    margin-right: 300px;
+    margin-left: 300px;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 20px;
+}
