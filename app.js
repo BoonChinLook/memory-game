@@ -91,7 +91,6 @@ function checkMatch() {
     if (cardsChosenIds[0] === cardsChosenIds[1]) {
         alert('You clicked the same image!');
         cards[cardsChosenIds[0]].setAttribute('src', 'images/blank.png');
-        cards[cardsChosenIds[1]].setAttribute('src', 'images/blank.png');
     } 
     else if (cardsChosen[0] === cardsChosen[1]) {
         alert('You found a match!');
