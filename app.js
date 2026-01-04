@@ -65,8 +65,7 @@ const cardArray = [
     }
 ]
 
-cardArray.sort(() => 0.5 - Math.random())
-
+cardArray.sort(() => 0.5 - Math.random());
 const gridDisplay = document.querySelector('#grid');
 let cardsChosen = [];
 let cardsChosenIds = [];
@@ -83,7 +82,18 @@ function createBoard() {
     }
 }
     resultDisplay.textContent = cardsWon.length;
-createBoard();
+
+function newGame() {
+
+    gridDisplay.innerHTML = "";  
+    cardsChosen = [];
+    cardsChosenIds = [];
+    cardsWon.length = 0;
+    resultDisplay.textContent = "0";
+    cardArray.sort(() => 0.5 - Math.random()); 
+    createBoard();
+}
+
 
 function checkMatch() {
     const cards = document.querySelectorAll('#grid img');
@@ -120,6 +130,6 @@ function flipCard() {
     this.setAttribute('src', cardArray[cardId].img);
     
     if (cardsChosen.length === 2) {
-        setTimeout(checkMatch, 500);
+        setTimeout(checkMatch, 300);
     }
 }
