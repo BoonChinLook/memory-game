@@ -6,13 +6,23 @@
     margin: 0 auto;
 }
 
-h2 {
+#newGame {
+    font-size: 1rem;
+    font-weight: bold;
+    background: hsl(180, 19%, 57%);
+    padding: 10px;
+    border-radius: 15px;  
+    margin-bottom: 5px;            
+}
+
+h4 {
     font-weight: bold;
     background: hsl(180, 19%, 57%);
     padding: 10px;
     border-radius: 15px;  
     display: inline-block;   
-    margin-bottom: 0px;            
+    margin-bottom: 0px;  
+    margin-top: 0px;          
 }
 
 html{
