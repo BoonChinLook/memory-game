@@ -118,7 +118,7 @@ function checkMatch() {
     cardsChosenIds = [];
     
     if (cardsWon.length === cardArray.length / 2) {
-       resultDisplay.textContent += "Congratulations, you found all matches!";
+       resultDisplay.textContent += " | Congratulations, you found all matches!";
         
     }
 }
