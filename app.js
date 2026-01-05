@@ -67,9 +67,12 @@ const cardArray = [
 
 cardArray.sort(() => 0.5 - Math.random());
 const gridDisplay = document.querySelector('#grid');
+const startGameButton = document.getElementById('newGame');
 let cardsChosen = [];
 let cardsChosenIds = [];
 const cardsWon = [];
+let attempts = 0;
+const attemptsDisplay = document.getElementById('attempts');
 const resultDisplay = document.getElementById('result');
 
 function createBoard() {
@@ -83,14 +86,25 @@ function createBoard() {
 }
 
 function newGame() {
-
+    startGameButton.textContent = "New Game";
     gridDisplay.innerHTML = "";  
     cardsChosen = [];
     cardsChosenIds = [];
     cardsWon.length = 0;
+    attempts = 0;
+    attemptsDisplay.textContent = 0;
     resultDisplay.textContent = "0";
     cardArray.sort(() => 0.5 - Math.random()); 
     createBoard();
+}
+
+function gameComplete() {
+    gridDisplay.innerHTML = ""; 
+    const gameFinish = document.createElement("p");
+    gameFinish.style.display = "inline-block";
+    gameFinish.style.fontWeight = "bold";
+    gameFinish.textContent = "Game Finished!";
+    gridDisplay.appendChild(gameFinish);
 }
 
 
@@ -113,12 +127,15 @@ function checkMatch() {
         cards[cardsChosenIds[1]].setAttribute('src', 'images/blank.png');
         alert('Try again!');
     }
+    attempts += 1;
+    attemptsDisplay.textContent = attempts;
     resultDisplay.textContent = cardsWon.length;
     cardsChosen = [];
     cardsChosenIds = [];
     
     if (cardsWon.length === cardArray.length / 2) {
-       resultDisplay.textContent += " | Congratulations, you found all matches!";
+       alert("Congratulations, you found all matches!");
+       gameComplete();
         
     }
 }
